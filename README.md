@@ -4,8 +4,9 @@ This middleware uses akIdentity server to add authenticated express app that wil
 
 #### Installation
 
-`npm i -s akidentity`
-
+```
+npm i -s akidentity
+```
 #### Usage
 
 To use you can crete new instance of the module
