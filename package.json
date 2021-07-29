@@ -12,8 +12,11 @@
   "dependencies": {
     "axios": "^0.21.1",
     "eslint": "^7.31.0",
+    "jsonwebtoken": "^8.5.1",
     "typescript": "^4.3.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/jsonwebtoken": "^8.5.4"
+  },
   "types": "dist/index.d.ts"
 }

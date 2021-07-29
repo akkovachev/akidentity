@@ -7,6 +7,7 @@ exports.auth = void 0;
 const helper_util_1 = require("./helper.util");
 const scope_service_1 = require("./services/scope.service");
 const axios_1 = __importDefault(require("axios"));
+const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 let scopesService = scope_service_1.scopeSingleton;
 const auth = async (req, res, next) => {
     if (!req.header('Authorization')) {
@@ -26,6 +27,10 @@ const auth = async (req, res, next) => {
                 scopes: scopes
             });
             if (checkIfHasActiveSession.data.valid) {
+                let decoded;
+                decoded = jsonwebtoken_1.default.decode(token);
+                console.log('decoded', decoded);
+                req.userId = decoded.id;
                 next();
             }
             else {
