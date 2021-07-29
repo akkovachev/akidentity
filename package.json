@@ -1,6 +1,6 @@
 {
   "name": "akidentity",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Middleware to help work with akIdentity Service",
   "main": "index.js",
   "scripts": {
