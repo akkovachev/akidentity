@@ -5,7 +5,9 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "tsc --project ./"
+        "build": "node delete.js && tsc --project ./",
+        "copyFiles": "copyfiles --error ./README.md dist",
+        "postbuild": "npm run copyFiles"
     },
     "author": "",
     "license": "ISC",
@@ -16,7 +18,8 @@
         "typescript": "^4.3.5"
     },
     "devDependencies": {
-        "@types/jsonwebtoken": "^8.5.4"
+        "@types/jsonwebtoken": "^8.5.4",
+        "copyfiles": "^2.4.1"
     },
     "types": "dist/index.d.ts"
 }
