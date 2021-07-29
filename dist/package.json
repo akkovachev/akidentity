@@ -1,7 +1,7 @@
 {
     "name": "akidentity",
-    "version": "1.0.3",
-    "description": "",
+    "version": "1.0.4",
+    "description": "Middleware to help work with akIdentity Service",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
         "copyFiles": "copyfiles --error ./README.md dist",
         "postbuild": "npm run copyFiles"
     },
-    "author": "",
+    "author": "Atanas Kovachev",
     "license": "ISC",
     "dependencies": {
         "axios": "^0.21.1",

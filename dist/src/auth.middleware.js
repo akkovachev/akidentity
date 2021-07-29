@@ -29,7 +29,6 @@ const auth = async (req, res, next) => {
             if (checkIfHasActiveSession.data.valid) {
                 let decoded;
                 decoded = jsonwebtoken_1.default.decode(token);
-                console.log('decoded', decoded);
                 req.userId = decoded.id;
                 next();
             }
