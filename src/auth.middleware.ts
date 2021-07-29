@@ -29,8 +29,6 @@ export const auth = async (req: any, res: any, next: any) => {
             if(checkIfHasActiveSession.data.valid) {
                 let decoded: any;
                 decoded = jwt.decode(token)
-
-                console.log('decoded', decoded)
                 req.userId = decoded.id
                 next()
             } else {
