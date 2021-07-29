@@ -37,5 +37,3 @@ myRoutes.delete('/delete/:userId', authMiddleware('delete'), deleteUserControlle
 //If we don't pass parameter this will be treated as "GENERIC" scope and everyone who has a valid token can access this
 myRoutes.get('/everyone', authMiddleware(), deleteUserController);
 ```
-
-Test
